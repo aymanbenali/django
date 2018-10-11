@@ -644,7 +644,8 @@ header .navbar {
   transition: .4s all;
 }
 #team .block img {
-  width: 100%;
+  width:343px;
+  height:229px;
   position: relative;
 }
 
@@ -920,6 +921,7 @@ footer .block a{
 #client-logo a img {
   transition: 0.3s;
   margin: 0 auto;
+  max-height: 70px;
 }
 #client-logo a:hover img {
   transform: scale(1.2);

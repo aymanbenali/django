@@ -1,5 +1,7 @@
 {% extends 'base_layout.html' %}
 {% load static from staticfiles %}
+{% load avatar_tags %}
+
 
 {% block content%}
 		<section id="banner">
@@ -179,144 +181,28 @@
 							<div class="recent-work-mixMenu">
 								<ul>
 									<li><button class="filter" data-filter="all">All</button></li>
-									<li><button class="filter" data-filter=".category-1">Managers</button></li>
-									<li><button class="filter" data-filter=".category-2">Mechanic Team</button></li>
-									<li><button class="filter" data-filter=".category-3">Electrical Team</button></li>
-									<li><button class="filter" data-filter=".category-4">S.M.L Team</button></li>
+									<li><button class="filter" data-filter=".Manager">Managers</button></li>
+									<li><button class="filter" data-filter=".Mechanic">Mechanic Team</button></li>
+									<li><button class="filter" data-filter=".Electrical">Electrical Team</button></li>
+									<li><button class="filter" data-filter=".Solarpon">S.M.L Team</button></li>
 								</ul>
 							</div>
 							<div class="recent-work-pic">
 								<ul id="mixed-items">
-									<li class="mix category-1 col-md-4 col-xs-6" data-my-order="1">
-										<a class="example-image-link" href="{% static 'membres/omar.png' %}"" data-lightbox="example-set">
-											<img class="img-responsive" src="{% static 'membres/omar.png' %}"" alt="">
-											<div class="overlay">
-													<h3>Omar ZENDAGUI</h3>
-													<h4>Project Manager</h4>
-													<i class="ion-ios-plus-empty"></i>
-											</div>
-										</a>
-									</li>
-									<li class="mix category-2 col-md-4 col-xs-6" data-my-order="2">
-										<a class="example-image-link" href="{% static 'membres/hiba.png' %}"" data-lightbox="example-set">
-											<img class="img-responsive" src="{% static 'membres/hiba.png' %}"" alt="">
-											<div class="overlay">
-												<h3>Hiba HMITO</h3>
-												<h4>Hardware DEVELOPER</h4>
-												<i class="ion-ios-plus-empty"></i>
-											</div>
-										</a>
-									</li>
-									<li class="mix category-3 col-md-4 col-xs-6" data-my-order="3">
-										<a class="example-image-link" href="{% static 'membres/mazighe.png' %}"" data-lightbox="example-set">
-											<img class="img-responsive" src="{% static 'membres/mazighe.png' %}"" alt="">
-											<div class="overlay">
-												<h3>Mohamed MAZIGHE</h3>
-												<h4>Elec Team Leader</h4>
-												<i class="ion-ios-plus-empty"></i>
-											</div>
-										</a>
-									</li>
-									<li class="mix category-3 col-md-4 col-xs-6" data-my-order="4">
-										<a class="example-image-link" img="logos/avatar.jpg" data-lightbox="example-set">
-											<img class="img-responsive" src="logos/avatar.jpg" alt="">
-											<div class="overlay">
-												<h3>Mohammed OULAD LAARBI</h3>
-												<h4>Hardware DEVELOPER</h4>
-												<i class="ion-ios-plus-empty"></i>
-											</div>
-										</a>
-									</li>
-									<li class="mix category-3 col-md-4 col-xs-6" data-my-order="4">
-										<a class="example-image-link" href="{% static 'membres/kenza.png' %}"" data-lightbox="example-set">
-											<img class="img-responsive" src="{% static 'membres/kenza.png' %}"" alt="">
-											<div class="overlay">
-												<h3>Kenza RISHI</h3>
-												<h4>Hardware DEVELOPER</h4>
-												<i class="ion-ios-plus-empty"></i>
-											</div>
-										</a>
-									</li>
-									<li class="mix category-2 col-md-4 col-xs-6" data-my-order="5">
-										<a class="example-image-link" href="{% static 'membres/khalid.png' %}"" data-lightbox="example-set">
-											<img class="img-responsive" src="{% static 'membres/khalid.png' %}"" alt="">
-											<div class="overlay">
-												<h3>Khalid CHAOUIA</h3>
-												<h4>Mechanical Team Leader</h4>
-												<i class="ion-ios-plus-empty"></i>
-											</div>
-										</a>
-									</li>
-									<li class="mix category-3 col-md-4 col-xs-6" data-my-order="6">
-										<a class="example-image-link" href="{% static 'membres/ayman.png' %}"" data-lightbox="example-set">
-											<img class="img-responsive" src="{% static 'membres/ayman.png' %}"" alt="">
-											<div class="overlay">
-												<h3>Ayman BENALI</h3>
-												<h4>Computer Science</h4>
-												<i class="ion-ios-plus-empty"></i>
-											</div>
-										</a>
-									</li>
-									<li class="mix category-3 col-md-4 col-xs-6" data-my-order="5">
-										<a class="example-image-link" href="{% static 'membres/rajae.png' %}"" data-lightbox="example-set">
-											<img class="img-responsive" src="{% static 'membres/rajae.png' %}"" alt="">
-											<div class="overlay">
-												<h3>Rajae LAABISSI</h3>
-												<h4>Hardware DEVELOPER</h4>
-												<i class="ion-ios-plus-empty"></i>
-											</div>
-										</a>
-									</li>
-									<li class="mix category-3 col-md-4 col-xs-6" data-my-order="5">
-										<a class="example-image-link" href="{% static 'membres/bader.png' %}"" data-lightbox="example-set">
-											<img class="img-responsive" src="{% static 'membres/bader.png' %}"" alt="">
-											<div class="overlay">
-												<h3>Badreddine ZIANE</h3>
-												<h4>Hardware DEVELOPER</h4>
-												<i class="ion-ios-plus-empty"></i>
-											</div>
-										</a>
-									</li>
-									<li class="mix category-4 col-md-4 col-xs-6" data-my-order="5">
-										<a class="example-image-link" href="{% static 'membres/randa.png' %}"" data-lightbox="example-set">
-											<img class="img-responsive" src="{% static 'membres/randa.png' %}"" alt="">
-											<div class="overlay">
-												<h3>Randa IMAGHNOUJEN</h3>
-												<h4>Solar panels</h4>
-												<i class="ion-ios-plus-empty"></i>
-											</div>
-										</a>
-									</li>
-									<li class="mix category-4 col-md-4 col-xs-6" data-my-order="5">
-										<a class="example-image-link" href="logos/avatar.jpg" data-lightbox="example-set">
-											<img class="img-responsive" src="logos/avatar.jpg" alt="">
-											<div class="overlay">
-												<h3>Hanae AKCHA</h3>
-												<h4>Sponsoring</h4>
-												<i class="ion-ios-plus-empty"></i>
-											</div>
-										</a>
-									</li>
-									<li class="mix category-1 col-md-4 col-xs-6" data-my-order="5">
-										<a class="example-image-link" href="logos/avatar.jpg" data-lightbox="example-set">
-											<img class="img-responsive" src="logos/avatar.jpg" alt="">
-											<div class="overlay">
-												<h3>Hamza KHLIFI</h3>
-												<h4>RH</h4>
-												<i class="ion-ios-plus-empty"></i>
-											</div>
-										</a>
-									</li>
-									<li class="mix category-3 col-md-4 col-xs-6" data-my-order="5">
-										<a class="example-image-link" href="logos/avatar.jpg" data-lightbox="example-set">
-											<img class="img-responsive" src="logos/avatar.jpg" alt="">
-											<div class="overlay">
-												<h3>ELIES</h3>
-												<h4>Lightening</h4>
-												<i class="ion-ios-plus-empty"></i>
-											</div>
-										</a>
-									</li>
+									<div class="category-list">
+										<div class="category">
+											{% for cat in category %}
+												<li class='mix {{cat.category}} col-md-4 col-xs-6' data-my-order="1">
+													<h3>{% avatar cat.user %}</h3>
+													<div class="overlay">
+															<h3>{{ cat.user }}</h3>
+															<h4>{{ cat.category }}</h4>
+															<i class="ion-ios-plus-empty"></i>
+													</div>
+												</li>
+											{% endfor %}
+										</div>		
+									</div>	
 								</ul>
 							</div>
 						</div>
@@ -348,36 +234,24 @@
 						<h2>The Team Leaders</h2>
 						<p>Dantes remained confused and silent by this explanation of the <br> thoughts which had unconsciously</p>
 					</div>
-					<div class="col-md-4 col-sm-4 col-xs-6">
-						<div class="block wow fadeInLeft" data-wow-delay=".3s">
-							<img src="{% static 'membres/khalid.png' %}"" alt="">
-							<div class="team-overlay">
-								<h3>Khalid CHIOUA <span>Mechanical Team Leader</span></h3>
-								<span class="icon"><i class="ion-quote"></i></span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4  col-sm-4 col-xs-6">
-						<div class="block wow fadeInLeft" data-wow-delay=".6s">
-							<img src="{% static 'membres/mazighe.png' %}"" alt="">
-							<div class="team-overlay">
-								<h3>Mohamed MAZIGHE <span>Elec Team Leader</span></h3>
-								<span class="icon"><i class="ion-quote"></i></span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4  col-sm-4 col-xs-6">
-						<div class="block wow fadeInLeft" data-wow-delay=".9s">
-							<img src="{% static 'logos/avatar.jpg' %}" alt="" style="height: 242px; width: 360px">
-							<div class="team-overlay">
-								<h3>Hanae AKCHA <span>S.M.L Team Leader</span></h3>
-								<span class="icon"><i class="ion-quote"></i></span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
-							</div>
-						</div>
-					</div>
+					<div class="category-list">
+						<div class="category">
+							{% for cat in category %}
+								{% if cat.is_leader != 'unknown' %}
+									<div class="col-md-4 col-sm-4 col-xs-6">
+										<div class="block wow fadeInLeft" data-wow-delay=".3s">
+											{% avatar cat.user %}
+											<div class="team-overlay">
+												<h3>{{ cat.user }} <span>{{ cat.is_leader }} Team Leader</span></h3>
+												<span class="icon"><i class="ion-quote"></i></span>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+											</div>
+										</div>
+									</div>
+								{% endif %}
+							{% endfor %}
+						</div>		
+					</div>		
 				</div>
 			</div>
 		</section>
@@ -522,56 +396,25 @@
 						<h2>Opinions</h2>
 						<p>Dantes remained confused and silent by this explanation of the <br> thoughts which had unconsciously</p>
 					</div>
-					<div class="col col-md-6">
-						<div class="media wow fadeInLeft" data-wow-delay=".3s">
-						  <div class="media-left">
-						    <a href="#">
-						      <img src="{% static 'membres/MO.jpg' %}"" alt="">
-						    </a>
-						  </div>
-						  <div class="media-body">
-						    <a href="#"><h4 class="media-heading">Mustapha Ouardouz</h4></a>
-						    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo</p>
-						  </div>
-						</div>
-					</div>
-					<div class="col col-md-6">
-						<div class="media wow fadeInRight" data-wow-delay=".3s">
-						  <div class="media-left">
-						    <a href="#">
-						      <img src="img/service-img.png" alt="">
-						    </a>
-						  </div>
-						  <div class="media-body">
-						    <a href="#"><h4 class="media-heading">Ibrahim Hadj Baraka</h4></a>
-						    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo</p>
-						  </div>
-						</div>
-					</div>
-					<div class="col col-md-6">
-						<div class="media wow fadeInLeft" data-wow-delay=".3s">
-						  <div class="media-left">
-						    <a href="#">
-						      <img src="{% static 'membres/MAK.png' %}"" alt="">
-						    </a>
-						  </div>
-						  <div class="media-body">
-						    <a href="#"><h4 class="media-heading">Mhamed Ait-lkbir</h4></a>
-						    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo</p>
-						  </div>
-						</div>
-					</div>
-					<div class="col col-md-6">
-						<div class="media wow fadeInRight" data-wow-delay=".3s">
-						  <div class="media-left">
-						    <a href="#">
-						      <img src="{% static 'membres/EM.jpg' %}"" alt="">
-						    </a>
-						  </div>
-						  <div class="media-body">
-						    <a href="#"><h4 class="media-heading">Elon Musk</h4></a>
-						    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo</p>
-						  </div>
+					<div class="comments-datail">
+						<div class="comments">
+							{% for com in comments %}
+								<div class="col col-md-6">
+									<div class="media wow fadeInLeft" data-wow-delay=".3s">
+									  <div class="media-left">
+									    <a href="#">
+									      <img src="{{ com.thumb.url }}" alt="">
+									    </a>
+									  </div>
+									  <div class="media-body">
+									    <a href="#">
+									    	<h4 class="media-heading">{{ com.owner }}</h4>
+									    </a>
+									    <p>{{ com.comment }}</p>
+									  </div>
+									</div>
+								</div>
+							{% endfor %}
 						</div>
 					</div>
 				</div>
@@ -580,45 +423,48 @@
 
 		<section id="client-logo">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="block">
-							<div id="Client_Logo" class="owl-carousel">
-								<div>
-									<a href="#"><img class="img-responsive" src="{% static 'logos/AA.png' %}" alt=""></a>
-								</div>
-								<div>
-									<a href="#"><img class="img-responsive" src="{% static 'logos/Tesla.png'%}" alt=""></a>
-								</div>
-								<div>
-									<a href="#"><img class="img-responsive" src="{% static 'img/clientLogo/client-logo3.jpg' %}" alt=""></a>
-								</div>
-								<div>
-									<a href="#"><img class="img-responsive" src="{% static 'img/clientLogo/client-logo4.jpg' %}" alt=""></a>
-								</div>
-								<div>
-									<a href="#"><img class="img-responsive" src="{% static 'img/clientLogo/client-logo5.jpg' %}" alt=""></a>
-								</div>
-								<div>
-									<a href="#"><img class="img-responsive" src="{% static 'img/clientLogo/client-logo6.jpg' %}" alt=""></a>
-								</div>
-								<div>
-									<a href="#"><img class="img-responsive" src="{% static 'img/clientLogo/client-logo1.jpg' %}" alt=""></a>
-								</div>
-								<div>
-									<a href="#"><img class="img-responsive" src="{% static 'img/clientLogo/client-logo2.jpg' %}" alt=""></a>
-								</div>
-								<div>
-									<a href="#"><img class="img-responsive" src="{% static 'img/clientLogo/client-logo3.jpg' %}" alt=""></a>
-								</div>
-								<div>
-									<a href="#"><img class="img-responsive" src="{% static 'img/clientLogo/client-logo4.jpg' %}" alt=""></a>
-								</div>
-								<div>
-									<a href="#"><img class="img-responsive" src="{% static 'img/clientLogo/client-logo5.jpg' %}" alt=""></a>
-								</div>
-								<div>
-									<a href="#"><img class="img-responsive" src="{% static 'img/clientLogo/client-logo6.jpg' %}" alt=""></a>
+				<div class="logos-details">
+					<div class="logos">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="block">
+									<div id="Client_Logo" class="owl-carousel">
+										{% for logo in logos %}
+											<div>
+												<a href="#"><img class="img-responsive" src="{{ logo.thumb.url }}" alt=""></a>
+											</div>
+										{% endfor %}
+										<div>
+											<a href="#"><img class="img-responsive" src="{% static 'img/clientLogo/client-logo3.jpg' %}" alt=""></a>
+										</div>
+										<div>
+											<a href="#"><img class="img-responsive" src="{% static 'img/clientLogo/client-logo4.jpg' %}" alt=""></a>
+										</div>
+										<div>
+											<a href="#"><img class="img-responsive" src="{% static 'img/clientLogo/client-logo5.jpg' %}" alt=""></a>
+										</div>
+										<div>
+											<a href="#"><img class="img-responsive" src="{% static 'img/clientLogo/client-logo6.jpg' %}" alt=""></a>
+										</div>
+										<div>
+											<a href="#"><img class="img-responsive" src="{% static 'img/clientLogo/client-logo1.jpg' %}" alt=""></a>
+										</div>
+										<div>
+											<a href="#"><img class="img-responsive" src="{% static 'img/clientLogo/client-logo2.jpg' %}" alt=""></a>
+										</div>
+										<div>
+											<a href="#"><img class="img-responsive" src="{% static 'img/clientLogo/client-logo3.jpg' %}" alt=""></a>
+										</div>
+										<div>
+											<a href="#"><img class="img-responsive" src="{% static 'img/clientLogo/client-logo4.jpg' %}" alt=""></a>
+										</div>
+										<div>
+											<a href="#"><img class="img-responsive" src="{% static 'img/clientLogo/client-logo5.jpg' %}" alt=""></a>
+										</div>
+										<div>
+											<a href="#"><img class="img-responsive" src="{% static 'img/clientLogo/client-logo6.jpg' %}" alt=""></a>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>

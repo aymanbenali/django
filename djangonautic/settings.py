@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'accounts',
     'avatar',
     'slider',
+    'category',
+    'comments',
+    'logos',
 ]
 
 MIDDLEWARE = [
